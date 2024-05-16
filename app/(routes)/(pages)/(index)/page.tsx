@@ -40,6 +40,7 @@ function Homepage({}: Props) {
   });
 
   const isSubmitting = form.formState.isSubmitting;
+  const isRequiredFieldEmpty = !form.formState.isValid;
 
   const onSubmit = async (values: MessageFormSchemaType) => {
     if(isSubmitting) return;
@@ -51,7 +52,7 @@ function Homepage({}: Props) {
       } finally {}
   }
 
-
+console.log(isRequiredFieldEmpty)
 
   return (
     <>
@@ -219,7 +220,7 @@ function Homepage({}: Props) {
       <div id='contact' className="w-full bg-gray-50 py-20 ">
         <ContainerWrapper className=''>
           <h1 className='text-3xl font-bold text-center uppercase'>Get In Touch Today</h1>
-          <p className='text-center w-full lg:w-[80%] mx-auto my-8 font-normal text-gray-500 '>As a full-stack web developer, I am passionate about turning ideas into reality through innovative and efficient web solutions. Whether you need a stunning website, a dynamic web application, or custom development services, I'm here to help. Let's collaborate and make your project a success. Reach out today!</p>
+          <p className='text-center w-full lg:w-[80%] mx-auto my-8 font-normal text-gray-500 '>As a full-stack web developer, I am passionate about turning ideas into reality through innovative and efficient web solutions. Whether you need a stunning website, a dynamic web application, or custom development services, {"I'm"} here to help. {"Let's"} collaborate and make your project a success. Reach out today!</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 mt-10">
           
@@ -276,8 +277,8 @@ function Homepage({}: Props) {
                   </FormItem>
                 )}
                 />
-              <Button disabled={isSubmitting} type='submit' className='w-full my-5 rounded-full '>
-              { isSubmitting && <Loader2  size={20} className="animate-spin mr-2" />}
+              <Button disabled={isSubmitting || isRequiredFieldEmpty } type='submit' className="w-full my-5 rounded-full disabled:cursor-not-allowed ">
+                { isSubmitting && <Loader2  size={20} className="animate-spin mr-2" />}
                 <span> {isSubmitting ? "Submitting..." : "Submit" } </span>
               </Button>
               </form>
