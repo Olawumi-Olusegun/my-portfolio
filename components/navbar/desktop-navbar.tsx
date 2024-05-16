@@ -13,7 +13,7 @@ function DesktopNavbar({}: Props) {
   return (
     <header className='fixed inset-0 flex items-center w-full h-16 backdrop-blur-md backdrop-brightness-150 bg-white/80 border-b'>
         <nav className='text-black max-w-screen-xl px-4 mx-auto  flex items-center justify-between w-full '>
-            <BrandLogo href={"/home"} />
+            <BrandLogo href={"/"} />
             <div className="flex items-center gap-3">
                 {navLinks.map((link, index) => (
                     <Link href={link.href} key={index}>

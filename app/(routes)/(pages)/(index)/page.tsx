@@ -48,7 +48,6 @@ function Homepage({}: Props) {
         const timeDelay = await delay(5000);
         form.reset();
       } catch (error) {
-        
       } finally {}
   }
 

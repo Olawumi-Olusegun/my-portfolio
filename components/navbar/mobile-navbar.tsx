@@ -18,7 +18,7 @@ function MobileNavbar({}: Props) {
     <>
     <Sheet>
         <div className="flex items-center justify-between p-4">
-            <BrandLogo href={"/home"} />
+            <BrandLogo href={"/"} />
             <SheetTrigger asChild >
                 <Button title='close' className='w-10 h-10 rounded-full p-0 '>
                     <Menu />
@@ -27,7 +27,7 @@ function MobileNavbar({}: Props) {
         </div>
         <SheetContent hideCloseButton side={"left"} className='border-r-0 px-0  bg-white '>
             <div className="flex items-center justify-between px-4">
-                <BrandLogo href={"/home"} className='text-black' />
+                <BrandLogo href={"/"} className='text-black' />
                 <SheetClose asChild>
                     <Button title='close' size={"icon"} className=' rounded-full bg-transparent group duration-300 p-0 '>
                         <X className='text-black duration-300 group-hover:text-white' />
