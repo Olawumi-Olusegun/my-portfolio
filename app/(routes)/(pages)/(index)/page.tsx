@@ -61,7 +61,7 @@ function Homepage({}: Props) {
         <div className="grid grid-cols-1 sm:grid-cols-2 pb-20 gap-5 bg-white">
           <div className="flex flex-col items-center sm:items-start ">
             <h1 className="text-center w-[90%] md:w-full sm:text-left text-lg font-bold underline ">Hi, My name is Olawumi Olusegun</h1>
-            <h1 className="text-center w-[90%] md:w-full sm:text-left text-3xl md:text-4xl lg:text-6xl font-bold py-5 pt-2 ">I'm a Fullstack Software Engineer.</h1>
+            <h1 className="text-center w-[90%] md:w-full sm:text-left text-3xl md:text-4xl lg:text-6xl font-bold py-5 pt-2 ">{"I'm"} a Fullstack Software Engineer.</h1>
             <div className="flex items-center gap-2 pb-10 ">
               
               <Link href={"https://github.com/Olawumi-Olusegun"} target='_blank' >
