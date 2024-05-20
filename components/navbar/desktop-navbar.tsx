@@ -22,12 +22,17 @@ function DesktopNavbar({}: Props) {
                 ))}
             </div>
             <div className="flex item-center gap-2">
-                <a className='p-2 rounded-fullmin-h-10 min-w-10 flex items-center justify-center ' href='https://github.com/Olawumi-Olusegun' target='_blank'> 
+                
+                <a className='p-2 rounded-full min-h-10 min-w-10 flex items-center justify-center ' href='https://github.com/Olawumi-Olusegun' target='_blank'> 
                     <Github className='rounde-full hover:animate-pulse' size={20} /> 
                 </a>
-                <Link href={"#contact"} >
-                <Button className='rounded-full bg-black hover:text-white text-white '>Hire me</Button>
-                </Link>
+
+                <Button asChild className='rounded-full bg-black hover:text-white text-white '>
+                    <Link href={"#contact"}>
+                        Hire me
+                    </Link>
+                </Button>
+
             </div>
         </nav>
     </header>

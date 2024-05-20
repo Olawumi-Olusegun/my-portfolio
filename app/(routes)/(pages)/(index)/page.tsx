@@ -18,7 +18,7 @@ type Props = {}
 
 const MessageFormSchema = z.object({
   fullname: z.string().min(3),
-  email: z.string().email(),
+  email: z.string().min(3).email(),
   message: z.string().min(3),
 });
 
@@ -39,6 +39,8 @@ function Homepage({}: Props) {
     resolver: zodResolver(MessageFormSchema)
   });
 
+  const errors = form.formState.errors;
+
   const isSubmitting = form.formState.isSubmitting;
   const isRequiredFieldEmpty = !form.formState.isValid;
 
@@ -51,14 +53,14 @@ function Homepage({}: Props) {
       } finally {}
   }
 
-console.log(isRequiredFieldEmpty)
+
 
   return (
     <>
-    <div id='hero' className="w-full mt-12 md:mt-24">
+    <div  id='hero' className="w-full mt-12 md:mt-[8rem]">
      {/* Hero section */}
       <ContainerWrapper>
-        <div className="grid grid-cols-1 sm:grid-cols-2 pb-20 gap-5 bg-white">
+        <div  className="grid grid-cols-1 sm:grid-cols-2 pb-20 gap-5 bg-white">
           <div className="flex flex-col items-center sm:items-start ">
             <h1 className="text-center w-[90%] md:w-full sm:text-left text-lg font-bold underline ">Hi, My name is Olawumi Olusegun</h1>
             <h1 className="text-center w-[90%] md:w-full sm:text-left text-3xl md:text-4xl lg:text-6xl font-bold py-5 pt-2 ">{"I'm"} a Fullstack Software Engineer.</h1>
@@ -80,7 +82,7 @@ console.log(isRequiredFieldEmpty)
 
             </div>
           </div>
-          <div className="overflow-hidden h-[350px]">
+          <div className="overflow-hidden  h-[300px] lg:h-[350px]">
             <img
             src="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
             alt="image"
@@ -155,57 +157,56 @@ console.log(isRequiredFieldEmpty)
       <ContainerWrapper id='projects' className='pb-20'>
         
         <h1 className='text-center text-3xl pb-20 font-semibold uppercase'>Projects</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-10 bg-white">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 bg-white">
           
-          <div className="flex flex-col gap-2  border rounded-md p-2 ">
-            <div className="overflow-hidden h-[350px]">
+          <div className="flex flex-col gap-2  border rounded-md pb-2 ">
+            <div className="overflow-hidden h-[300px]">
               <img
               src="/images/properties.png" 
               alt="image"
               className='w-full h-full object-cover rounded-md pointer-events-none '
               />
             </div>
-            <a href={"https://propertypulse-wine.vercel.app"} target='_blank' className='self-end'>
+            <a href={"https://propertypulse-wine.vercel.app"} target='_blank' className='self-end p-3'>
               <Button size={"sm"} >Live Demo</Button>
             </a>
           </div>
           
-          <div className="flex flex-col gap-2  border rounded-md p-2 ">
-            <div className="overflow-hidden h-[350px]">
+          <div className="flex flex-col gap-2  border rounded-md pb-2 ">
+            <div className="overflow-hidden h-[300px]">
               <img
               src="/images/aleeph.png" 
               alt="image"
               className='w-full h-full object-cover rounded-md pointer-events-none '
               />
             </div>
-            <a href={"https://www.aleephng.com"} target='_blank' className='self-end' >
+            <a href={"https://www.aleephng.com"} target='_blank' className='self-end p-3' >
               <Button size={"sm"} >Live Demo</Button>
             </a>
           </div>
           
-          
-          <div className="flex flex-col gap-2  border rounded-md p-2 ">
-            <div className="overflow-hidden h-[350px]">
+          <div className="flex flex-col gap-2  border rounded-md pb-2 ">
+            <div className="overflow-hidden h-[300px]">
               <img
               src="/images/travelrouters.png" 
               alt="image"
               className='w-full h-full object-cover rounded-md pointer-events-none '
               />
             </div>
-            <a href={"https://www.travelroutersng.com/latestUpdate/public/"} target='_blank' className='self-end'>
+            <a href={"https://www.travelroutersng.com/latestUpdate/public/"} target='_blank' className='self-end p-3'>
               <Button size={"sm"} >Live Demo</Button>
             </a>
           </div>
           
-          <div className="flex flex-col gap-2  border rounded-md p-2 ">
-            <div className="overflow-hidden h-[350px]">
+          <div className="flex flex-col gap-2  border rounded-md pb-2 ">
+            <div className="overflow-hidden h-[300px]">
               <img
               src="/images/jobboard.png" 
               alt="image"
               className='w-full h-full object-cover rounded-md pointer-events-none '
               />
             </div>
-            <a href={"https://job-board-portal.vercel.app"} target='_blank' className='self-end' >
+            <a href={"https://job-board-portal.vercel.app"} target='_blank' className='self-end p-3' >
               <Button size={"sm"} >Live Demo</Button>
             </a>
           </div>
@@ -216,7 +217,7 @@ console.log(isRequiredFieldEmpty)
       </ContainerWrapper>
     
     {/* Contact */}
-      <div id='contact' className="w-full bg-gray-50 py-20 ">
+      <div id='contact' className="w-full bg-gray-50 py-20 border-y ">
         <ContainerWrapper className=''>
           <h1 className='text-3xl font-bold text-center uppercase'>Get In Touch Today</h1>
           <p className='text-center w-full lg:w-[80%] mx-auto my-8 font-normal text-gray-500 '>As a full-stack web developer, I am passionate about turning ideas into reality through innovative and efficient web solutions. Whether you need a stunning website, a dynamic web application, or custom development services, {"I'm"} here to help. {"Let's"} collaborate and make your project a success. Reach out today!</p>
@@ -247,6 +248,7 @@ console.log(isRequiredFieldEmpty)
                     <FormControl>
                       <Input placeholder='Enter your fullname' {...field} />
                     </FormControl>
+                    {errors.fullname && <span className='text-xs text-red-500'>{errors.fullname.message}</span> }
                   </FormItem>
                 )}
                 />
@@ -260,6 +262,7 @@ console.log(isRequiredFieldEmpty)
                       <FormControl>
                         <Input placeholder='Enter your email' {...field} />
                       </FormControl>
+                      {errors.email && <span className='text-xs text-red-500'>{errors.email.message}</span> }
                     </FormItem>
                   )}                
                 />
@@ -273,12 +276,13 @@ console.log(isRequiredFieldEmpty)
                     <FormControl>
                       <Textarea placeholder='Enter your message' {...field}></Textarea>
                     </FormControl>
+                    {errors.message && <span className='text-xs text-red-500'>{errors.message.message}</span> }
                   </FormItem>
                 )}
                 />
-              <Button disabled={isSubmitting || isRequiredFieldEmpty } type='submit' className="w-full my-5 rounded-full disabled:cursor-not-allowed ">
+              <Button disabled={isSubmitting || isRequiredFieldEmpty } type={isSubmitting ? 'button' : 'submit'} className="w-full my-5 rounded-full disabled:cursor-not-allowed ">
                 { isSubmitting && <Loader2  size={20} className="animate-spin mr-2" />}
-                <span> {isSubmitting ? "Submitting..." : "Submit" } </span>
+                <span> {isSubmitting ? "Please wait..." : "Submit" } </span>
               </Button>
               </form>
             </Form>
@@ -291,7 +295,7 @@ console.log(isRequiredFieldEmpty)
 
 
     {/* Footer */}
-      <div id='footer' className="border-t w-full py-20">
+      <div id='footer' className="w-full py-20">
         <ContainerWrapper>
           <div className="flex flex-col items-center gap-2">
 
