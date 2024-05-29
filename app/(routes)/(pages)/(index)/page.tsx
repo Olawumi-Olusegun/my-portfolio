@@ -227,8 +227,8 @@ function Homepage({}: Props) {
         <div className="items-end">
           <div className="flex flex-col items-center justify-end gap-5 ml-auto">
             <Mail size={20} />
-            <span className='text-sm font-semibold'>Email: olawumi.olusegun@gmail.com</span>
-            <span className='text-sm font-semibold'>Phone number: +234 706 506 6382</span>
+            <span className='text-sm font-semibold'> <span className='font-bold text-base'>Email:</span> olawumi.olusegun@gmail.com</span>
+            <span className='text-sm font-semibold'> <span className='font-bold text-base'>Phone number:</span> +234 706 506 6382</span>
             <a href="mailto: olawumi.olusegun@gmail.com">
               <Button className='rounded-full bg-black hover:text-white text-white'>Send Message</Button>
             </a>
