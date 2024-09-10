@@ -32,7 +32,7 @@ const delay = (delayInms: number) => {
   return new Promise((resolve) => setTimeout(resolve, delayInms));
 };
 
-function Homepage({}: Props) {
+function Homepage({ }: Props) {
   const form = useForm<MessageFormSchemaType>({
     defaultValues: {
       fullname: "",
@@ -168,6 +168,58 @@ function Homepage({}: Props) {
             Projects
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 bg-white">
+
+            <div className="flex flex-col gap-2  border rounded-md pb-2 ">
+              <div className="overflow-hidden h-[300px]">
+                <img
+                  src="/images/travelrouters.png"
+                  alt="image"
+                  className="w-full h-full object-cover rounded-md pointer-events-none "
+                />
+              </div>
+              <a
+                href={"https://www.travelroutersng.com"}
+                target="_blank"
+                className="self-end p-3"
+              >
+                <Button size={"sm"}>Live Demo</Button>
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-2  border rounded-md pb-2 ">
+              <div className="overflow-hidden h-[300px]">
+                <img
+                  src="/images/ecommerce-store.png"
+                  alt="image"
+                  className="w-full h-full object-cover rounded-md pointer-events-none "
+                />
+              </div>
+              <a
+                href={"https://ecommerce-store-clec.onrender.com"}
+                target="_blank"
+                className="self-end p-3"
+              >
+                <Button size={"sm"}>Live Demo</Button>
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-2  border rounded-md pb-2 ">
+              <div className="overflow-hidden h-[300px]">
+                <img
+                  src="/images/app-dashboard.png"
+                  alt="image"
+                  className="w-full h-full object-cover rounded-md pointer-events-none "
+                />
+              </div>
+              <a
+                href={"https://app-dashboard-alpha.vercel.app"}
+                target="_blank"
+                className="self-end p-3"
+              >
+                <Button size={"sm"}>Live Demo</Button>
+              </a>
+            </div>
+
             <div className="flex flex-col gap-2  border rounded-md pb-2 ">
               <div className="overflow-hidden h-[300px]">
                 <img
@@ -184,6 +236,8 @@ function Homepage({}: Props) {
                 <Button size={"sm"}>Live Demo</Button>
               </a>
             </div>
+
+
             <div className="flex flex-col gap-2  border rounded-md pb-2 ">
               <div className="overflow-hidden h-[300px]">
                 <img
@@ -228,23 +282,6 @@ function Homepage({}: Props) {
               </div>
               <a
                 href={"https://www.aleephng.com"}
-                target="_blank"
-                className="self-end p-3"
-              >
-                <Button size={"sm"}>Live Demo</Button>
-              </a>
-            </div>
-
-            <div className="flex flex-col gap-2  border rounded-md pb-2 ">
-              <div className="overflow-hidden h-[300px]">
-                <img
-                  src="/images/travelrouters.png"
-                  alt="image"
-                  className="w-full h-full object-cover rounded-md pointer-events-none "
-                />
-              </div>
-              <a
-                href={"https://www.travelroutersng.com"}
                 target="_blank"
                 className="self-end p-3"
               >
