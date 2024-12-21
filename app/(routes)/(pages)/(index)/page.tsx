@@ -223,6 +223,23 @@ function Homepage({ }: Props) {
             <div className="flex flex-col gap-2  border rounded-md pb-2 ">
               <div className="overflow-hidden h-[300px]">
                 <img
+                  src="/images/crm.png"
+                  alt="image"
+                  className="w-full h-full object-contain rounded-md pointer-events-none "
+                />
+              </div>
+              <a
+                href={"https://crm-dashboard-ryae.vercel.app"}
+                target="_blank"
+                className="self-end p-3"
+              >
+                <Button size={"sm"}>Live Demo</Button>
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-2  border rounded-md pb-2 ">
+              <div className="overflow-hidden h-[300px]">
+                <img
                   src="/images/ai-prompt.png"
                   alt="image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
