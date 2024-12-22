@@ -173,7 +173,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/travelrouters.png"
-                  alt="image"
+                  alt="travelrouters image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
@@ -190,7 +190,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/ecommerce-store.png"
-                  alt="image"
+                  alt="ecommerce-store image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
@@ -207,7 +207,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/app-dashboard.png"
-                  alt="image"
+                  alt="dashboard image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
@@ -223,8 +223,25 @@ function Homepage({ }: Props) {
             <div className="flex flex-col gap-2  border rounded-md pb-2 ">
               <div className="overflow-hidden h-[300px]">
                 <img
+                  src="/images/colorPalette.png"
+                  alt="colorPalette image"
+                  className="w-full h-full object-cover rounded-md pointer-events-none "
+                />
+              </div>
+              <a
+                href={"https://color-palette-from-image.netlify.app"}
+                target="_blank"
+                className="self-end p-3"
+              >
+                <Button size={"sm"}>Live Demo</Button>
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-2  border rounded-md pb-2 ">
+              <div className="overflow-hidden h-[300px]">
+                <img
                   src="/images/crm.png"
-                  alt="image"
+                  alt="crm image"
                   className="w-full h-full object-contain rounded-md pointer-events-none "
                 />
               </div>
@@ -241,7 +258,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/ai-prompt.png"
-                  alt="image"
+                  alt="ai-prompt image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
@@ -259,7 +276,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/positivus.png"
-                  alt="image"
+                  alt="positivus image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
@@ -276,7 +293,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/properties.png"
-                  alt="image"
+                  alt="properties image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
@@ -293,7 +310,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/aleeph.png"
-                  alt="image"
+                  alt="aleeph image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
@@ -310,7 +327,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/tikchat.png"
-                  alt="image"
+                  alt="tikchat image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
@@ -327,7 +344,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/sass.png"
-                  alt="image"
+                  alt="sass image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
@@ -344,7 +361,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/tiktok.png"
-                  alt="image"
+                  alt="tiktok landing page image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
@@ -361,7 +378,7 @@ function Homepage({ }: Props) {
               <div className="overflow-hidden h-[300px]">
                 <img
                   src="/images/jobber.png"
-                  alt="image"
+                  alt="jobber image"
                   className="w-full h-full object-cover rounded-md pointer-events-none "
                 />
               </div>
